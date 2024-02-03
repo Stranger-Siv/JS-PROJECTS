@@ -1,1 +1,0 @@
-In this project i am going to prepare a project based on weather App using API which will be done in HTML,CSS,JAVASCRIPT.
