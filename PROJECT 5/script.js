@@ -1,15 +1,15 @@
 const notesContainer = document.querySelector(".notes-container")
 const createBtn = document.querySelector(".btn")
 
-let notes = document.querySelectorAll(".input-box")
+let note = document.querySelectorAll(".input-box")
 
 function showNotes(){
-    notesContainer.innerHTML = localStorage.getItem("notes")
+    notesContainer.innerHTML = localStorage.getItem("note")
 }
 showNotes()
 
 function updateStorage(){
-    localStorage.setItem("notes",notesContainer.innerHTML)
+    localStorage.setItem("note",notesContainer.innerHTML)
 }
 
 createBtn.addEventListener("click",()=>{
@@ -27,8 +27,8 @@ notesContainer.addEventListener("click",function(e){
         e.target.parentElement.remove()
         updateStorage()
     }else if(e.target.tagName === "P"){
-        notes = document.querySelectorAll(".input-box")
-        notes.forEach(nt =>{
+        note = document.querySelectorAll(".input-box")
+        note.forEach(nt =>{
             nt.onkeyup = function(){
                 updateStorage()
             }
