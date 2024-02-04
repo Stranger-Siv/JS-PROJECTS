@@ -11,7 +11,7 @@ body{
     height: 100vh;
     justify-content: center;
     align-items: center;
-    background-color: rgb(46, 43, 226);
+    background: linear-gradient(135deg,#C33764,#1D2671);
 }
 #question{
     font-size: 22px;
