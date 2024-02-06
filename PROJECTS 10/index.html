@@ -21,8 +21,19 @@
             <img src="media/project10.png" class="song-img">
             <h1>Despacito</h1>
             <p>Louis fonsi ft.Daddy Yankee </p>
-            <audio src="media/"></audio>
+            <audio id="song">
+                <source src="media/Despacito(PagalWorld).mp3" type="audio/mpeg">
+            </audio>
+            <input type="range" value="0" id="progress">
+            <div class="controls">
+                <div><i class="fa-solid fa-backward"></i></div>
+                <div onclick="playPause()"><i class="fa-solid fa-play" id="ctrlIcon"></i></div>
+                <div><i class="fa-solid fa-forward"></i></div>
+                
+            </div>
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
