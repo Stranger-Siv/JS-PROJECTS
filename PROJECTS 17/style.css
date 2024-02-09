@@ -4,3 +4,46 @@
     box-sizing: border-box;
     font-family: 'poppins',sans-serif;
 }
+body{
+    background: #191919;
+}
+.gallery{
+    width: 900px;
+    display: flex;
+    overflow-x: scroll;
+}
+.gallery div{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+    padding: 10px;
+    flex: none;
+    transition: transform 0.5s;
+    cursor: pointer;
+}
+.gallery div img{
+    width: 100%;
+    filter: grayscale(100%);
+    
+}
+.gallery::-webkit-scrollbar{
+    display:none;
+}
+.gallery-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10% auto;
+
+}
+#backBtn , #nextBtn{
+    width: 50px;
+    cursor: pointer;
+    margin: 40px;
+}
+.gallery div img:hover{
+    filter: grayscale(0);
+    transform: scale(1.1);
+}
+
