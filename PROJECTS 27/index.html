@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptocurrency Info</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!--JQuery CDN link-->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul>
+                <li><a href="https://www.coingecko.com/en/global-charts" target="_blank">Global Chart</a></li>
+                <li><a href="https://www.coingecko.com/en/compare-cryptocurrencies" target="_blank">Compare</a></li>
+                <li><a href="https://www.coingecko.com/en/new-cryptocurrencies" target="_blank">New Coins</a></li>
+                <li><a href="https://www.coingecko.com/learn" target="_blank">Learn Crypto</a></li>
+            </ul>
+            <a href="#" class="btn">EN</a>
+        </nav>
+
+
+        <div class="content">
+            <h1>BUY & <br>SELL <span>Crypto</span></h1>
+            <p> Discover the world of cryptocurrencies with our comprehensive and <br>user-friendly crypto website.</p>
+                <a href="https://www.coingecko.com/" target="_blank" class="btn">EXPLORE MORE</a>
+        </div>
+
+        <div class="coin-list">
+            <div class="coin">
+                <a href="https://www.coingecko.com/en/coins/bitcoin" target="_blank"><img src="images/bitcoin.png" alt="Bitcoin image"></a>
+                <div>
+                    <h3>Rs - <span id="bitcoin"></span></h3>
+                    <p>Bitcoin</p>
+                </div>
+            </div>
+            <div class="coin">
+                <a href="https://www.coingecko.com/en/coins/ethereum" target="_blank"><img src="images/ethereum.png" alt="Ethereum image"></a>
+                <div>
+                    <h3>Rs - <span id="ethereum"></span></h3>
+                    <p>Ethereum</p>
+                </div>
+            </div>
+            <div class="coin">
+                <a href="https://www.coingecko.com/en/coins/dogecoin" target="_blank"><img src="images/dogecoin.png" alt="Dodgecoin image"></a>
+                <div>
+                    <h3>Rs - <span id="dogecoin"></span></h3>
+                    <p>Dodgecoin</p>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
