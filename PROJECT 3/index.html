@@ -3,23 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Quiz App</title>
-    <link href="style.css" rel="stylesheet">
-    <script defer src="script.js"></script>
+    <title>Quiz Site</title>
+    <link rel="stylesheet" href="./style.css">
+    
 </head>
 <body>
-    <div class="container">
-        <div id="question-container" class="hide">
-            <div id="question">Question</div>
-            <div id="answer-buttons" class="btn-grid">
-        
+    <div class="app">
+        <h1>JavaScript Quiz</h1>
+        <div class="quiz">
+            <h2 id="question">Question goes here</h2>
+            <div id="answer-buttons">
+                <button class="btn">Answer 1</button>
+                <button class="btn">Answer 2</button>
+                <button class="btn">Answer 3</button>
+                <button class="btn">Answer 4</button>
             </div>
+            <button id="next-btn">Next</button>
         </div>
-        <div class="controls">
-            <button id="start-btn" class="start-btn btn">Start</button>
-            <button id="next-btn" class="next-btn btn hide">Next</button>   
-        </div>
-    </div>    
+    </div>
+
+
+    <!--JS File-->
+    <script src="./script.js"></script>
 </body>
 </html>

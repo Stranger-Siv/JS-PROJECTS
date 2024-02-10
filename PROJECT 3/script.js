@@ -1,138 +1,295 @@
 const questions = [
     {
-        question: "Which is the largest animal on earth ?",
+        question: "What is the full-form of HTML:?",
         answers: [
-            { text: "Shark", correct: false },
-            { text: "Blue Whale", correct: true },
-            { text: "Elephant", correct: false },
-            { text: "Giraffe", correct: false },
-        ]
+            {
+                text: "Hyper Text Markup Language",
+                correct: true,
+            },
+            {
+                text: "Hyper Text Manage Learning",
+                correct: false,
+            },
+            {
+                text: "High Testing Manage Language ",
+                correct: false,
+            },
+            {
+                text: "All of the above",
+                correct: false,
+            },
+        ],
     },
     {
-        question: "Who is the President of India ?",
+        question: "What is the purpose of the prototype property in JavaScript?",
         answers: [
-            { text: "APJ Abdul Kalam", correct: false },
-            { text: "Pranab Mukharjee", correct: false },
-            { text: "Draupadi Murmu", correct: true },
-            { text: "Narendra Modi", correct: false },
-        ]
+            {
+                text: "To modify an object",
+                correct: false,
+            },
+            {
+                text: "To inherit properties from another object",
+                correct: false,
+            },
+            {
+                text: "To create a new object",
+                correct: false,
+            },
+            {
+                text: "To store the prototype of an object",
+                correct: true,
+            },
+        ],
     },
     {
-        question: "Which is the biggest company in the world ?",
+        question: "What is the difference between a constructor function and a regular function in JavaScript?",
         answers: [
-            { text: "Apple", correct: true },
-            { text: "Google", correct: false },
-            { text: "Microsoft", correct: false },
-            { text: "Tesla", correct: false },
-        ]
+            {
+                text: "A constructor function cannot be called directly, while a regular function can.",
+                correct: false,
+            },
+            {
+                text: "A constructor function has a prototype property, while a regular function does not.",
+                correct: false,
+            },
+            {
+                text: " A constructor function is used to create new objects, while a regular function is used to perform an action.",
+                correct: true,
+            },
+            {
+                text: "All the above",
+                correct: false,
+            },
+        ],
     },
     {
-        question: "Who invented Zero ?",
+        question: "What is the purpose of the this keyword in JavaScript?",
         answers: [
-            { text: "Einstein", correct: false },
-            { text: "Thomas Alva Edission", correct: false },
-            { text: "Issac Newton", correct: false },
-            { text: "Aryabhatta", correct: true },
-        ]
-    }
+            {
+                text: "To refer to the global object.",
+                correct: false,
+            },
+            {
+                text: "To refer to the current object.",
+                correct: true,
+            },
+            {
+                text: "To refer to the window object.",
+                correct: false,
+            },
+            {
+                text: "All the above",
+                correct: false,
+            },
+        ],
+    },
+    {
+        question: "What is the difference between === and == in JavaScript?",
+        answers: [
+            {
+                text: "=== checks for strict equality, while == checks for loose equality.",
+                correct: true,
+            },
+            {
+                text: "=== can be used with objects, while == cannot.",
+                correct: false,
+            },
+            {
+                text: "=== is a newer operator than ==.",
+                correct: false,
+            },
+            {
+                text: "All the above",
+                correct: false,
+            },
+        ],
+    },
+    {
+        question: "What is the purpose of the typeof operator in JavaScript?",
+        answers: [
+            {
+                text: "To get the length of a variable.",
+                correct: false,
+            },
+            {
+                text: "To get the value of a variable.",
+                correct: false,
+            },
+            {
+                text: "To get the type of a variable.",
+                correct: true,
+            },
+            {
+                text: "To get the name of a variable.",
+                correct: false,
+            },
+        ],
+    },
+    {
+        question: "What is the difference between NaN and undefined in JavaScript?`;",
+        answers: [
+            {
+                text: "NaN is a global constant, while undefined is a global variable.",
+                correct: false,
+            },
+            {
+                text: "NaN is a special value that represents a non-number, while undefined is a special value that represents a variable that has not been assigned a value.",
+                correct: true,
+            },
+            {
+                text: "NaN can be used in mathematical operations, while undefined cannot.",
+                correct: false,
+            },
+            {
+                text: "All the above",
+                correct: false,
+            },
+        ],
+    },
+    {
+        question: "What is the purpose of the isNaN() function in JavaScript?",
+        answers: [
+            {
+                text: "To check if a value is a string.",
+                correct: false,
+            },
+            {
+                text: "To check if a value is an object.",
+                correct: false,
+            },
+            {
+                text: "To check if a value is undefined.",
+                correct: false,
+            },
+            {
+                text: "To check if a value is a number.",
+                correct: true,
+            },
+        ],
+    },
+    {
+        question: "What is the purpose of the setTimeout() function in JavaScript?",
+        answers: [
+            {
+                text: "To delay the execution of a function.",
+                correct: true,
+            },
+            {
+                text: "To cancel the execution of a function.",
+                correct: false,
+            },
+            {
+                text: "To repeat the execution of a function.",
+                correct: false,
+            },
+            {
+                text: "To stop the execution of a function.",
+                correct: false,
+            },
+        ],
+    },
+    {
+        question: "What is the purpose of the addEventListener() method in JavaScript?",
+        answers: [
+            {
+                text: "To add an event listener to an element.",
+                correct: true,
+            },
+            {
+                text: "To remove an event listener from an element.",
+                correct: false,
+            },
+            {
+                text: "To modify an event listener on an element.",
+                correct: false,
+            },
+            {
+                text: "To listen for events on an element.",
+                correct: false,
+            },
+        ],
+    },
 ];
 
+const questionElement = document.getElementById("question");
+const answerButtons = document.getElementById("answer-buttons");
+const nextButton = document.getElementById("next-btn");
 
+let currentQuestionIndex = 0;
+let score = 0;
 
-const startButton = document.getElementById('start-btn')
-const nextButton = document.getElementById('next-btn')
-const questionContainerElement = document.getElementById('question-container')
-const questionElement = document.getElementById('question')
-const answerButtonsElement = document.getElementById('answer-buttons')
-
-let score=0
-
-let shuffledQuestions, currentQuestionIndex
-startButton.addEventListener('click', startGame)
-nextButton.addEventListener('click', ()=>{
-    currentQuestionIndex++
-    setNextQuestion()
-})
-
-function startGame(){
-    console.log('Game started');
-    startButton.classList.add('hide');
-    shuffledQuestions = questions.sort(() => Math.random() - .5)
-    currentQuestionIndex = 0
-    questionContainerElement.classList.remove('hide');
-    setNextQuestion();
+function startQuiz(){
+    currentQuestionIndex = 0;
+    score = 0;
+    nextButton.innerHTML = "Next";
+    showQuestion();
 }
 
-function setNextQuestion(){
-    resetState()
-    showQuestion(shuffledQuestions[currentQuestionIndex]);
-}
+function showQuestion(){
+    resetState();
+    let currentQuestion = questions[currentQuestionIndex];
+    let questionNo = currentQuestionIndex + 1;
+    questionElement.innerHTML = questionNo + "." + currentQuestion.question;
 
-function showQuestion(question){
-    questionElement.innerHTML = question.question
-    question.answers.forEach(answer => {
-        const button = document.createElement('button')
-        button.innerHTML = answer.text
-        button.classList.add('btn')
+    currentQuestion.answers.forEach(answer => {
+        const button = document.createElement("button");
+        button.innerHTML = answer.text;
+        button.classList.add("btn");
+        answerButtons.appendChild(button);
         if(answer.correct){
-            button.dataset.correct = answer.correct
+            button.dataset.correct = answer.correct;
         }
-        button.addEventListener('click', selectAnswer)
-        answerButtonsElement.appendChild(button)
-    })
-}
-
-
-function selectAnswer(e){
-
-    const selectedButton = e.target
-    const correct = selectedButton.dataset.correct
-    setStatusClass(document.body, correct)
-    Array.from(answerButtonsElement.children).forEach(button => {
-        setStatusClass(button, button.dataset.correct)
-    })
-    
-    if(shuffledQuestions.length > currentQuestionIndex + 1){
-        nextButton.classList.remove('hide')
-    }else{
-        displayFinalScore();
-        // startButton.innerText = 'Restart'
-        // startButton.classList.remove('hide')
-       
-    }
-
-
+        button.addEventListener("click", selectAnswer);
+    });
 }
 
 function resetState(){
-    clearStatusClass(document.body)
-    nextButton.classList.add('hide')
-    while(answerButtonsElement.firstChild){
-        answerButtonsElement.removeChild(answerButtonsElement.firstChild)
+    nextButton.style.display ="none";
+    while(answerButtons.firstChild){
+        answerButtons.removeChild(answerButtons.firstChild);
     }
-
 }
 
-function setStatusClass(element, correct){
-    clearStatusClass(element)
-    if(correct){
-        element.classList.add('correct')
-        score++
+function selectAnswer(e){
+    const selectedBtn = e.target;
+    const isCorrect = selectedBtn.dataset.correct === "true";
+    if(isCorrect){
+        selectedBtn.classList.add("correct");
+        score++;
     }else{
-        element.classList.add('wrong')
+        selectedBtn.classList.add("incorrect");
+    }
+    Array.from(answerButtons.children).forEach(button => {
+        if(button.dataset.correct === "true"){
+            button.classList.add("correct");
+        }
+        button.disabled = true;
+    });
+    nextButton.style.display = "block";
+}
+
+function showScore(){
+    resetState();
+    questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
+    nextButton.innerHTML = "Play Again";
+    nextButton.style.display = "block";
+}
+
+function handleNextButton(){
+    currentQuestionIndex++;
+    if(currentQuestionIndex < questions.length){
+        showQuestion();
+    }else{
+        showScore();
     }
 }
 
+nextButton.addEventListener("click", ()=>{
+    if(currentQuestionIndex < questions.length){
+        handleNextButton();
+    }else{
+        startQuiz();
+    }
+});
 
-function clearStatusClass(element){
-    element.classList.remove('correct')
-    element.classList.remove('wrong')
-}
-
-
-function displayFinalScore() {
-    questionContainerElement.innerHTML = `
-      <h2>You finished the quiz!</h2>
-      <p>Your final score is ${score-4}/${questions.length}</p>
-    `;
-  }
+startQuiz();
