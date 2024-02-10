@@ -7,6 +7,7 @@ scrollContainer.addEventListener("wheel",(e)=>{
     scrollContainer.scrollLeft += e.deltaY
     scrollContainer.style.scrollBehaviour = "auto"
 })
+
 nextBtn.addEventListener("click",()=>{
     scrollContainer.style.scrollBehaviour = "smooth"
     scrollContainer.scrollLeft += 900
