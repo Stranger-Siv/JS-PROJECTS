@@ -16,3 +16,5 @@ backBtn.addEventListener("click",()=>{
     scrollContainer.style.scrollBehaviour = "smooth"
     scrollContainer.scrollLeft -= 900
 })
+
+let name = document.querySelector(".name")
