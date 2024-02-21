@@ -5,7 +5,7 @@ const chatInput = document.querySelector(".chat-input textarea");
 const sendChatBtn = document.querySelector(".chat-input span");
 
 let userMessage = null;
-const API_KEY = "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";
+const API_KEY = "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";
 const inputInitHeight = chatInput.scrollHeight;
 
 const createChatLi = (message, className) => {
@@ -73,7 +73,7 @@ chatInput.addEventListener("input", () => {
 chatInput.addEventListener("keydown", (e) => {
     // If Enter key is pressed without Shift key and the window 
     // width is greater than 800px, handle the chat
-    if(e.key === "Enter" && !e.shiftKey && window.innerWidth > 800) {
+    if(e.key === "Enter" && !e.shiftKey && window.innerWidth > 100) {
         e.preventDefault();
         handleChat();
     }
