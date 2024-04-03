@@ -21,6 +21,7 @@ const questions = [
         ],
     },
     {
+        
         question: "What is the purpose of the prototype property in JavaScript?",
         answers: [
             {
