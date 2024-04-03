@@ -12,6 +12,7 @@ nextBtn.addEventListener("click",()=>{
     scrollContainer.style.scrollBehaviour = "smooth"
     scrollContainer.scrollLeft += 900
 })
+
 backBtn.addEventListener("click",()=>{
     scrollContainer.style.scrollBehaviour = "smooth"
     scrollContainer.scrollLeft -= 900
