@@ -99,10 +99,12 @@ header h2 {
 .chatbox .chat {
   display: flex;
   list-style: none;
+
 }
 .chatbox .outgoing {
   margin: 20px 0;
   justify-content: flex-end;
+  
 }
 .chatbox .incoming span {
   width: 32px;
