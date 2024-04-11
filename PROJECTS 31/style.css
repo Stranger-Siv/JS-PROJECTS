@@ -95,7 +95,6 @@ header h2 {
 .chatbot :where(.chatbox, textarea)::-webkit-scrollbar-thumb {
   background: #ccc;
   border-radius: 25px;
-  
 }
 .chatbox .chat {
   display: flex;
