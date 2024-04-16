@@ -65,7 +65,6 @@ const handleChat = () => {
 }
 
 chatInput.addEventListener("input", () => {
-    // Adjust the height of the input textarea based on its content
     chatInput.style.height = `${inputInitHeight}px`;
     chatInput.style.height = `${chatInput.scrollHeight}px`;
 });
