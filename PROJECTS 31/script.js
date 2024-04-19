@@ -47,7 +47,6 @@ const handleChat = () => {
     userMessage = chatInput.value.trim(); 
     if(!userMessage) return;
 
-    // Clear the input textarea and set its height to default
     chatInput.value = "";
     chatInput.style.height = `${inputInitHeight}px`;
 
