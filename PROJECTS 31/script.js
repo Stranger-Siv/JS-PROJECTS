@@ -21,7 +21,6 @@ const generateResponse = (chatElement) => {
     const API_URL = "https://api.openai.com/v1/chat/completions";
     const messageElement = chatElement.querySelector("p");
 
-    // Define the properties and message for the API request
     const requestOptions = {
         method: "POST",
         headers: {
