@@ -14,7 +14,7 @@ const createChatLi = (message, className) => {
     let chatContent = className === "outgoing" ? `<p></p>` : `<span class="material-symbols-outlined">smart_toy</span><p></p>`;
     chatLi.innerHTML = chatContent;
     chatLi.querySelector("p").textContent = message;
-    return chatLi; // return chat <li> element
+    return chatLi; 
 }
 
 const generateResponse = (chatElement) => {
